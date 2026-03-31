@@ -1,0 +1,24 @@
+{
+  "name": "@zendesk-lite/db",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "migrate": "tsx src/scripts/migrate.ts",
+    "seed": "tsx src/scripts/seed.ts",
+    "verify:isolation": "tsx src/scripts/verifyIsolation.ts",
+    "rollback": "tsx src/scripts/rollback.ts"
+  },
+  "dependencies": {
+    "dotenv": "latest",
+    "drizzle-orm": "latest",
+    "pg": "latest"
+  },
+  "devDependencies": {
+    "drizzle-kit": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/pg": "latest"
+  }
+}

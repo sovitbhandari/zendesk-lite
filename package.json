@@ -1,0 +1,17 @@
+{
+  "name": "zendesk-lite",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:migrate": "npm --workspace @zendesk-lite/db run migrate",
+    "db:seed": "npm --workspace @zendesk-lite/db run seed",
+    "db:verify-isolation": "npm --workspace @zendesk-lite/db run verify:isolation",
+    "db:rollback": "npm --workspace @zendesk-lite/db run rollback"
+  }
+}
